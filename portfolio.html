@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Play It Yourself</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      padding: 0;
+    }
+    .image-container {
+      margin: 0 auto; /* center the image containers */
+      width: 40%;
+      height: 10%;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.30), 0 2px 1px rgba(0,0,0,0.22); /* material box shadow */
+      margin-bottom: 20px;
+      transition-duration: 1s;
+    }
+    .image-container:hover {
+      width: 40%;
+      height: 10%;
+      
+box-shadow: 0 1px 2px rgba(0,0,0,0.30), 0 1px 00.5px rgba(0,0,0,0.22);    }
+    /* make the images responsive */
+    img {
+      width: 90%;
+      height: 20%;
+    }
+    
+    /* lightbox stylesheet */
+    .lightbox {
+      display: table; /* helps us center the lightbox-content */
+      transition-duration: 1s; /* duration of the fade in effect */
+    
+      /* make the lightbox occupy the entire page */
+      position: fixed;
+      top: -100%; /* hide the lightbox above the top edge */
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+    }
+    .lightbox:target {
+      top: 0; /* make the lightbox cover the entire page */
+    }
+    .lightbox-content {
+      display: table-cell;
+      vertical-align: middle; /* vertically center */
+      text-align: center; /* horizontally center */
+    }
+    .close {
+      /* position the CLOSE button to the top-right corner */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    
+      /* style the close button */
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: none;
+      color: white;
+    }
+    
+    /* make the image responsive */
+    .lightbox img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <span style="margin-left: 20px ; margin-top: 2px; padding: 0">
+    <a href="index.html" style="text-decoration: none; font-weight: bolder; background: blue; font-size: 250%; color: white">Home</a>
+    <h1 style="text-align: center; padding: 0">My Skills</h1>
+  </span>
+  
+  <div class="gallery">
+  
+    <div class="image-container" id="container1">
+      <a href="#image1"><img src="img.jpg" class="img"/></a>
+    </div>
+  
+    <div class="image-container" id="container2">
+      <a href="#image2"><img src="img1.jpg" /></a>
+    </div>
+  
+    <div class="image-container" id="container3">
+      <a href="#image3"><img src="img2.jpg"  class=""/></a>
+    </div>
+  
+  </div>
+  
+  <div class="lightbox" id="image1">
+    <a href="#" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="img.jpg" />
+    </div>
+  </div>
+  
+  <div class="lightbox" id="image2">
+    <a href="#" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="img1.jpg" />
+    </div>
+  </div>
+  
+  <div class="lightbox" id="image3">
+    <a href="#container3" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="img2.jpg" />
+    </div>
+  </div>
+  
+
+  </div>
+</body>
+</html>
